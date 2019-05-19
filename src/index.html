@@ -96,30 +96,33 @@
       <div>
         <h2>
           Contact us to get started
-        </h2>
+        </h2 class="container">
         <p>
           We'll reply when we get back from coding.
         </p>
         <div class="cont">
           <form>
             <div class="row">
+              <div class="col">
                 <label for="name">Name</label>
                 <input type="text" id="name" class="info">
-      
+              </div>
+              <div class="col">
                 <label for="email">Email</label>
                 <input type="text" id="email" class="info">
+              </div>
             </div>
-            <div class="row">
-                <label for="tech">Your Technology</label>
-                <p>
-                    <input type="text" id="tech" class="info">
-                </p>
+            <div class="row flex-col">
+              <label for="tech">Your Technology</label>
+              <input type="text" id="tech" class="info">      
             </div>
-            <div class="row">
-                <label for="msg">Message</label>
-                <textarea name="msg" class="info"></textarea>
+            <div class="row flex-col">
+              <label for="msg">Message</label>
+              <textarea name="msg" class="info"></textarea>
             </div>
-            <button id="show-modal">Send</button>
+            <div class="col button">
+              <button id="show-modal">Send</button>
+            </div>
           </form>
         </div>
         <div role="dialog" id="modal-dialog" aria-modal="true" class="modal-dialog hidden">
@@ -129,7 +132,9 @@
           <p>
             Remember, we'll get back to you after we get from coding.
           </p>
-          <button id="close-modal">Close</button>
+          <div class="modal-button">
+              <button id="close-modal">Close</button>
+          </div>
         </div>
       </div>
     </section>

@@ -73,13 +73,37 @@ header{
 .contact {
   padding: 3rem;
   position: relative;
-  text-align: center;
   justify-content: center;
   background-color: $altbg;
 
   .row {
     padding:0.5rem;
-  }
+    display: flex;
+
+    label,input,textarea{
+      display: block;
+      width:100%;
+      }
+    }
+
+    .col{
+      text-align: left;
+      width: 50%;
+      &:first-child{
+        padding-right: 10px;
+      }
+      &:last-child{
+        padding-left: 10px;
+      }
+    }
+
+    .flex-col{
+      padding: .5rem;
+      width:100%;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
 
   .info {
     background: transparent;
@@ -96,6 +120,12 @@ header{
     letter-spacing: 0.1rem;
     font-weight: bold;
   }
+  .button{
+    padding-top: 1rem;
+    width:100%;
+    text-align: right;
+    
+  }
 }
 
 .modal-dialog{
@@ -103,15 +133,22 @@ header{
   background-color: white;
   border: 1px solid black;
   box-shadow: 0 0 10px 1px rgba(0,0,0,.4);
-  padding: 20px;
+  padding: 15px;
   
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 
+  h2{
+    margin-bottom: 0;
+  }
+  .modal-button{
+    text-align: right;
+  }
   #close-modal{
     background-color: transparent;
   }
+
 }
 
 footer {
